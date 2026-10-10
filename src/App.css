@@ -1,27 +1,56 @@
+/* Navigation Bar */
+
 .header {
-  background: #005a32;
-  color: white;
-  padding: 18px 8%;
+  background: #f1f1f1;
+  color: #222;
+  padding: 8px 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.header nav a {
-  color: white;
+.logo {
+  color: #222;
   text-decoration: none;
-  margin-left: 25px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-.header nav a:hover {
-  text-decoration: underline;
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
 }
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.navbar button,
+.navbar a {
+  background: #ddd;
+  color: #222;
+  border: none;
+  padding: 7px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbar button:hover,
+.navbar a:hover {
+  background: #ccc;
+}
+
+/* Featured Sections */
 
 .featured {
   text-align: center;
@@ -160,12 +189,11 @@
 
 @media (max-width: 700px) {
   .header {
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
   }
 
-  .header nav a {
-    margin: 0 8px;
+  .navbar {
+    width: 100%;
   }
 
   .card-container {
@@ -187,5 +215,85 @@
     text-align: center;
     gap: 20px;
   }
+}
 
+/* Login and Sign-up Pages */
+
+.login-page {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px #ddd;
+}
+
+.login-page h2 {
+  text-align: center;
+  margin: 0 0 25px;
+  font-size: 26px;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-page label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-page input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-page input:focus {
+  outline: 2px solid #008f95;
+  border-color: #008f95;
+}
+
+.login-page form button {
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #005a32;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-page form button:hover {
+  background: #004524;
+}
+
+.login-page form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-page form a {
+  color: #005a32;
+  font-weight: 600;
+}
+
+.form-error {
+  color: #c62828;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .login-page {
+    margin: 25px 15px;
+    padding: 22px;
+  }
 }

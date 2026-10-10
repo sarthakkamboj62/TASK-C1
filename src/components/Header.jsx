@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
+
 function Header() {
     return (
         <header className="header">
-            <h1>DEV@Deakin</h1>
+            <Link to="/" className="logo">
+                DEV@Deakin
+            </Link>
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Articles</a>
-                <a href="#">Projects</a>
+            <nav className="navbar">
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    className="search-input"
+                />
+
+                <button type="button">Post</button>
+
+                <Link to="/login">Login</Link>
             </nav>
         </header>
     );
