@@ -1,6 +1,25 @@
-/* Navigation Bar */
+/* 
+   GLOBAL STYLES
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/*
+   NAVIGATION BAR
+*/
 
 .header {
+  width: 100%;
+  min-height: 55px;
   background: #f1f1f1;
   color: #222;
   padding: 8px 3%;
@@ -28,17 +47,23 @@
 .search-input {
   flex: 1;
   min-width: 0;
+  height: 34px;
   padding: 7px 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  background: #fff;
+  font-size: 14px;
 }
 
 .navbar button,
 .navbar a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #ddd;
   color: #222;
   border: none;
-  padding: 7px 12px;
+  padding: 8px 14px;
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
@@ -50,7 +75,9 @@
   background: #ccc;
 }
 
-/* Featured Sections */
+/*
+   FEATURED SECTIONS
+*/
 
 .featured {
   text-align: center;
@@ -70,7 +97,7 @@
 }
 
 .card {
-  background: white;
+  background: #fff;
   width: 280px;
   padding: 18px;
   border-radius: 10px;
@@ -119,13 +146,15 @@
   background: #ccc;
 }
 
-/* Newsletter */
+/*
+   NEWSLETTER
+*/
 
 .newsletter {
   text-align: center;
   padding: 30px;
   background: #005a32;
-  color: white;
+  color: #fff;
 }
 
 .newsletter h2 {
@@ -147,7 +176,7 @@
 
 .subscribe button {
   margin: 0;
-  background: white;
+  background: #fff;
   color: #005a32;
   border: none;
   padding: 12px 20px;
@@ -155,11 +184,13 @@
   cursor: pointer;
 }
 
-/* Footer */
+/* 
+   FOOTER
+ */
 
 .footer-content {
   background: #008f95;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -178,46 +209,16 @@
   background: #006f73;
   text-align: center;
   padding: 20px;
-  color: white;
+  color: #fff;
 }
 
 .footer-bottom p {
   margin: 8px;
 }
 
-/* Mobile */
-
-@media (max-width: 700px) {
-  .header {
-    flex-wrap: wrap;
-  }
-
-  .navbar {
-    width: 100%;
-  }
-
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .subscribe {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .subscribe input {
-    width: 90%;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-}
-
-/* Login and Sign-up Pages */
+/* 
+   LOGIN AND SIGN-UP PAGES
+*/
 
 .login-page {
   max-width: 420px;
@@ -266,7 +267,7 @@
   border: none;
   border-radius: 5px;
   background: #005a32;
-  color: white;
+  color: #fff;
   font-size: 15px;
   cursor: pointer;
 }
@@ -289,6 +290,240 @@
   color: #c62828;
   font-size: 14px;
   margin: 0;
+}
+
+/*  NEW POST PAGE
+ */
+
+.new-post {
+  width: 88%;
+  max-width: 1200px;
+  margin: 16px auto 40px;
+  padding: 0;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.new-post .post-heading {
+  display: block;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 6px 8px;
+  background: #e5e5e5;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.new-post .post-type {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 10px 0 14px;
+  font-size: 12px;
+}
+
+.new-post .post-type>span {
+  margin-right: 2px;
+}
+
+.new-post .post-type label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.new-post .post-type input {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.new-post .section-heading {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 6px 8px;
+  background: #e5e5e5;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.new-post .post-description {
+  max-width: 750px;
+  margin: 8px auto 14px;
+  text-align: center;
+  line-height: 1.45;
+  font-size: 11px;
+  color: #333;
+}
+
+.new-post .post-description span {
+  color: #d9534f;
+}
+
+.new-post .form-row {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.new-post .form-row label,
+.new-post .form-field>label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.new-post .form-row input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 23px;
+  margin: 0;
+  padding: 3px 7px;
+  border: 1px solid #999;
+  border-radius: 0;
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.new-post .form-row input::placeholder,
+.new-post .form-field textarea::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.new-post .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.new-post .form-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid #999;
+  border-radius: 0;
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+.new-post .question-textarea {
+  height: 195px;
+}
+
+.new-post .abstract-textarea {
+  height: 82px;
+}
+
+.new-post .article-textarea {
+  height: 240px;
+}
+
+.new-post .tags-row {
+  margin-top: 14px;
+}
+
+.new-post .post-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.new-post .submit-post {
+  display: block;
+  width: 155px;
+  height: 32px;
+  margin: 0;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 0;
+  background: #9da3ae;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.new-post .submit-post:hover {
+  background: #858b96;
+}
+
+/*
+   MOBILE RESPONSIVE STYLES */
+
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe input {
+    width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .new-post {
+    width: 94%;
+  }
+
+  .new-post .post-type {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .new-post .form-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .new-post .post-button-container {
+    justify-content: stretch;
+  }
+
+  .new-post .submit-post {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {

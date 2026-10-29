@@ -14,7 +14,9 @@ function Header() {
                     className="search-input"
                 />
 
-                <button type="button">Post</button>
+                <Link to="/post" className="post-link">
+                    Post
+                </Link>
 
                 <Link to="/login">Login</Link>
             </nav>

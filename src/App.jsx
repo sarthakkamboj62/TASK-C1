@@ -5,6 +5,7 @@ import FeaturedTutorials from "./components/FeaturedTutorials";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import NewPost from "./pages/NewPost";
 import "./App.css";
 
 function Home() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/post" element={<NewPost />} />
       </Routes>
 
       <Footer />
